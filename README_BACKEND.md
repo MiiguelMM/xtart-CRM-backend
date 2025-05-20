@@ -63,7 +63,7 @@ src/
 
 ## 👨‍💻 Autor
 
-Desarrollado por **[Tu Nombre]**  
+Desarrollado por **Miguel Melgarejo Sánchez**  
 🔗 [LinkedIn]() · 🐙 [GitHub](https://github.com/MiiguelMM)
 
 ---

@@ -287,7 +287,7 @@ public class FacturaApiController {
 
             document.open();
 
-            // --- TÍTULO Y ENCABEZADO ---
+            // TÍTULO Y ENCABEZADO 
             Font titleFont = new Font(Font.FontFamily.HELVETICA, 22, Font.BOLD);
             Paragraph empresa = new Paragraph("Xtart Solutions", titleFont);
             empresa.setAlignment(Element.ALIGN_CENTER);
@@ -299,7 +299,7 @@ public class FacturaApiController {
             document.add(line);
             document.add(new Paragraph(" "));
 
-            // --- INFORMACIÓN BÁSICA ---
+            // INFORMACIÓN BÁSICA 
             String fechaStr = factura.getFecha().format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
             document.add(new Paragraph("Fecha: " + fechaStr));
 
@@ -315,7 +315,7 @@ public class FacturaApiController {
 
             document.add(new Paragraph(" "));
 
-            // --- TABLA DE PRODUCTOS ---
+            // TABLA DE PRODUCTOS 
             PdfPTable tabla = new PdfPTable(4);
             tabla.setWidthPercentage(100);
 
@@ -356,7 +356,7 @@ public class FacturaApiController {
             document.add(tabla);
             document.add(new Paragraph(" "));
 
-            // --- TOTAL ---
+            // TOTAL 
             Font boldFont = new Font(Font.FontFamily.HELVETICA, 12, Font.BOLD);
             Paragraph total = new Paragraph(String.format("TOTAL: $%.2f", factura.getTotal()), boldFont);
             total.setAlignment(Element.ALIGN_RIGHT);
@@ -364,7 +364,7 @@ public class FacturaApiController {
 
             document.add(new Paragraph(" "));
 
-            // --- PIE DE PÁGINA ---
+            // PIE DE PÁGINA 
             Font footerFont = new Font(Font.FontFamily.HELVETICA, 8, Font.NORMAL);
             Paragraph footer = new Paragraph("Gracias por su compra\nXtart Solutions", footerFont);
             footer.setAlignment(Element.ALIGN_CENTER);
