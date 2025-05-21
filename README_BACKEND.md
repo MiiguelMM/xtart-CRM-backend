@@ -29,11 +29,19 @@ cd xtart-backend
 
 3. Configura el archivo `application.properties`:
 
-```properties
+
+```properties  
+
 spring.datasource.url=jdbc:mysql://localhost:3306/xtart_db
 spring.datasource.username=tu_usuario
 spring.datasource.password=tu_contraseña
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
 spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true  
+spring.jpa.properties.hibernate.format_sql=true 
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
+
 ```
 
 4. Ejecuta el proyecto:

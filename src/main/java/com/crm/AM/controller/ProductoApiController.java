@@ -134,13 +134,12 @@ public class ProductoApiController {
         long total = productoRepository.count();
         long activos = productoRepository.countByActivoTrue();
         long bajoStock = productoRepository.countByStockLessThan(10);
-        double crecimiento = total > 0 ? ((double) (total - bajoStock) / total) * 100 : 0;
+
 
         Map<String, Object> result = new HashMap<>();
         result.put("total", total);
         result.put("activos", activos);
         result.put("bajoStock", bajoStock);
-        result.put("crecimiento", crecimiento);
 
         return result;
     }

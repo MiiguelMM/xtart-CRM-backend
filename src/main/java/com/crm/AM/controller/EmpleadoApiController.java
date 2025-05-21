@@ -63,13 +63,12 @@ public class EmpleadoApiController {
         long total = empleadoRepository.count();
         long activos = empleadoRepository.countByActivoTrue();
         long inactivos = total - activos;
-        double crecimiento = total > 0 ? ((double) activos / total) * 100 : 0;
 
         Map<String, Object> result = new HashMap<>();
         result.put("total", total);
         result.put("activos", activos);
         result.put("inactivos", inactivos);
-        result.put("crecimiento", crecimiento);
+
 
         return result;
     }
@@ -141,15 +140,5 @@ public class EmpleadoApiController {
         }
     }
 
-    // 9. Generar reporte (placeholder)
-    @GetMapping("/reporte")
-    public String generarReporte() {
-        return "Función para generar reporte aún no implementada.";
-    }
-
-    // 10. Exportar empleados (placeholder)
-    @GetMapping("/exportar")
-    public String exportarEmpleados() {
-        return "Función para exportar empleados aún no implementada.";
-    }
+ 
 }
