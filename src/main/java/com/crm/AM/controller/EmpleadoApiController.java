@@ -69,7 +69,6 @@ public class EmpleadoApiController {
         result.put("activos", activos);
         result.put("inactivos", inactivos);
 
-
         return result;
     }
 
