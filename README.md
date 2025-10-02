@@ -60,7 +60,7 @@ spring.mail.properties.mail.smtp.starttls.enable=true
 
 La API estará disponible en `http://localhost:8080`.
 
-Aunque esta subida en netify :
+Aunque esta subida en render : https://xtartsolutions-crm.onrender.com/
 
 ---
 
